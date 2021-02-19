@@ -8,7 +8,8 @@ namespace DesignPattern
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("");
-            CreationalPattern();
+            // CreationalPattern();
+            StructuralPattern();
         }
 
         private static void CreationalPattern()
@@ -32,6 +33,38 @@ namespace DesignPattern
             CallPattern("单例模式", () =>
             {
                 new Singleton.Program().Main();
+            });
+        }
+
+        private static void StructuralPattern()
+        {
+            CallPattern("适配器模式", () =>
+            {
+                new Adapter.Program().Main();
+            });
+            CallPattern("桥接模式", () =>
+            {
+                new Bridge.Program().Main();
+            });
+            CallPattern("组合模式", () =>
+            {
+                new Composite.Program().Main();
+            });
+            CallPattern("装饰模式", () =>
+            {
+                new Decorator.Program().Main();
+            });
+            CallPattern("外观模式", () =>
+            {
+                new Facade.Program().Main();
+            });
+            CallPattern("享元模式", () =>
+            {
+                new Flyweight.Program().Main();
+            });
+            CallPattern("代理模式", () =>
+            {
+                new Proxy.Program().Main();
             });
         }
 

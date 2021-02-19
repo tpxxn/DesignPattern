@@ -97,7 +97,7 @@ namespace Builder
                 str += this._parts[i] + ", ";
             }
 
-            str = str.Remove(str.Length - 2); // removing last ",c"
+            str = str.Remove(str.Length - 2); // removing last ", "
 
             return "Product parts: " + str + "\n";
         }
