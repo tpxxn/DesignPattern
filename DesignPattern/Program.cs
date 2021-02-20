@@ -8,10 +8,14 @@ namespace DesignPattern
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("");
-            // CreationalPattern();
+            CreationalPattern();
             StructuralPattern();
+            BehavioralPattern();
         }
 
+        /// <summary>
+        /// 创建型模式
+        /// </summary>
         private static void CreationalPattern()
         {
             CallPattern("工厂方法模式", () =>
@@ -36,6 +40,9 @@ namespace DesignPattern
             });
         }
 
+        /// <summary>
+        /// 结构型模式
+        /// </summary>
         private static void StructuralPattern()
         {
             CallPattern("适配器模式", () =>
@@ -68,6 +75,58 @@ namespace DesignPattern
             });
         }
 
+        /// <summary>
+        /// 行为模式
+        /// </summary>
+        private static void BehavioralPattern()
+        {
+            CallPattern("责任链模式", () =>
+            {
+                new ChainOfResponsibility.Program().Main();
+            });
+            CallPattern("命令模式", () =>
+            {
+                new Command.Program().Main();
+            });
+            CallPattern("迭代器模式", () =>
+            {
+                new Iterator.Program().Main();
+            });
+            CallPattern("中介者模式", () =>
+            {
+                new Mediator.Program().Main();
+            });
+            CallPattern("备忘录模式", () =>
+            {
+                new Memento.Program().Main();
+            });
+            CallPattern("观察者模式", () =>
+            {
+                new Observer.Program().Main();
+            });
+            CallPattern("状态模式", () =>
+            {
+                new State.Program().Main();
+            });
+            CallPattern("策略模式", () =>
+            {
+                new Strategy.Program().Main();
+            });
+            CallPattern("模板方法模式", () =>
+            {
+                new TemplateMethod.Program().Main();
+            });
+            CallPattern("访问者模式", () =>
+            {
+                new Visitor.Program().Main();
+            });
+        }
+
+        /// <summary>
+        /// 调用指定模式
+        /// </summary>
+        /// <param name="patternChineseName">模式中文名称，用于打印显示</param>
+        /// <param name="callback">实际调用模式的方法回调</param>
         private static void CallPattern(string patternChineseName, Action callback)
         {
             Console.WriteLine($"===={patternChineseName}====");
